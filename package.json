@@ -1,0 +1,53 @@
+{
+  "name": "image_recognition_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r ts-node/register src/server.ts",
+    "start:watch": "nodemon",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "aws-sdk": "^2.430.0",
+    "bcrypt": "^3.0.5",
+    "class-validator": "^0.9.1",
+    "db-migrate-pg": "^0.5.0",
+    "dotenv": "^7.0.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "moment": "^2.24.0",
+    "pg": "^7.9.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.15",
+    "watson-developer-cloud": "^3.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.4",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.3.4000"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts,js"
+  }
+}
